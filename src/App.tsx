@@ -33,7 +33,7 @@ import React from 'react'
 
 // export default App
 const App: React.FC = () => {
-  return <h1>Hello, React!</h1>
+  return <h1>Welcome to Earn Brownie!</h1>
 }
 
 export default App
