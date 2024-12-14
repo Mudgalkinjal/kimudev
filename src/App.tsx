@@ -1,39 +1,26 @@
 import React from 'react'
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-// import About from './pages/About'
-// import SignIn from './pages/SignIn'
-// import SignUp from './pages/SignUp'
+import Header from './components/Header'
+import Navigation from './components/Navigation'
+import AboutSection from './components/AboutSection'
+import WorkSection from './components/WorkSection'
+import ContactSection from './components/ContactSection'
+import CustomCursor from './components/CustomCursor'
+import ProfileSection from './components/ProfileSection'
+import ScrollController from './components/ScrollController'
 
-// const App: React.FC = () => {
-//   return (
-//     <Router>
-//       <header>
-//         <nav>
-//           <ul>
-//             <li>
-//               <a href="/">About Us</a>
-//             </li>
-//             <li>
-//               <a href="/signin">Sign In</a>
-//             </li>
-//             <li>
-//               <a href="/signup">Sign Up</a>
-//             </li>
-//           </ul>
-//         </nav>
-//       </header>
-//       <Routes>
-//         <Route path="/" element={<About />} />
-//         <Route path="/signin" element={<SignIn />} />
-//         <Route path="/signup" element={<SignUp />} />
-//       </Routes>
-//     </Router>
-//   )
-// }
-
-// export default App
 const App: React.FC = () => {
-  return <h1>Welcome to Earn Brownie!</h1>
+  return (
+    <div className="bg-black text-white min-h-screen">
+      <ScrollController />
+      <CustomCursor />
+      <Navigation />
+      <Header />
+      <AboutSection />
+      <ProfileSection />
+      <WorkSection />
+      <ContactSection />
+    </div>
+  )
 }
 
 export default App
