@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import MachineLearning from '../pages/MachineLearning'
 
 const WorkSection: React.FC = () => {
   return (
@@ -45,10 +46,12 @@ const WorkSection: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="text-2xl font-bold">Machine Learning</h3>
-          <p className="mt-2 text-gray-300 text-center">
-            Experiment with AI models and predictive analytics.
-          </p>
+          <a href="/machinelearning">
+            <h3 className="text-2xl font-bold">Machine Learning</h3>
+            <p className="mt-2 text-gray-300 text-center">
+              Experiment with AI models and predictive analytics.
+            </p>
+          </a>
         </motion.div>
       </div>
     </section>
