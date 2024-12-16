@@ -15,7 +15,7 @@ const ProfileSection: React.FC = () => {
       >
         <h2 className="text-3xl font-bold">Profile</h2>
         <p className="text-lg mt-4 max-w-lg text-gray-400">
-          Add your profile information.
+          Add your Profile / Work experience here
         </p>
       </motion.div>
     </section>

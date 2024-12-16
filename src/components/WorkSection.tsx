@@ -15,9 +15,9 @@ const WorkSection: React.FC = () => {
         viewport={{ once: true }}
         className="text-center mb-8"
       >
-        <h2 className="text-3xl font-bold text-white">Work Experience</h2>
+        <h2 className="text-3xl font-bold text-white">Personal projects</h2>
         <p className="text-lg mt-4 max-w-lg text-gray-400">
-          Showcase your professional journey here.
+          Showcase your projects here.
         </p>
       </motion.div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 px-4">
