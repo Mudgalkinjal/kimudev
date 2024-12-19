@@ -5,7 +5,7 @@ import MachineLearning from '../pages/MachineLearning'
 const WorkSection: React.FC = () => {
   return (
     <section
-      id="work section4"
+      id="work section3"
       className="section w-full h-screen flex flex-col items-center justify-center bg-gray-700"
     >
       <motion.div

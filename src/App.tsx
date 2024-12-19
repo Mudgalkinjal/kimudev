@@ -5,23 +5,23 @@ import Navigation from './components/Navigation'
 import AboutSection from './components/AboutSection'
 import WorkSection from './components/WorkSection'
 import ContactSection from './components/ContactSection'
-import CustomCursor from './components/CustomCursor'
 import ProfileSection from './components/ProfileSection'
 import ScrollController from './components/ScrollController'
 import SentimentPage from './pages/SentimentPage' // New page for the model
 import MachineLearning from './pages/MachineLearning'
-
+import ScrollToTop from './components/ScrollToTop'
+import CustomCursor from './components/CustomCursor'
+import './App.css'
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
+      <CustomCursor />
       <ScrollController />
       <Navigation />
       <Routes>
-        {/* Route for the main one-page scrollable layout */}
         <Route path="/" element={<MainPage />} />
-        {/* Route for the Machine Learning page */}
         <Route path="/machinelearning" element={<MachineLearning />} />
-        {/* Route for the Machine Learning page */}
         <Route path="/sentimentpage" element={<SentimentPage />} />
       </Routes>
     </Router>
@@ -50,26 +50,5 @@ const MainPage: React.FC = () => {
     </div>
   )
 }
-
-// const App: React.FC = () => {
-//   return (
-//     <div>
-//       <ScrollController />
-//       <CustomCursor />
-//       <Navigation />
-//       <Router>
-//         <div className="bg-black text-white min-h-screen">
-//           <Navigation />
-//           <Header />
-//           <AboutSection />
-//           <ProfileSection />
-//           <WorkSection />
-//           <ContactSection />
-//           <SentimentPage />
-//         </div>
-//       </Router>
-//     </div>
-//   )
-// }
 
 export default App

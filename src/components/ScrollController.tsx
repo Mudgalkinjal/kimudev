@@ -1,36 +1,45 @@
 import React, { useEffect, useRef } from 'react'
 
 const ScrollController: React.FC = () => {
-  const isScrolling = useRef(false) // A flag to prevent multiple scrolls
+  const isScrolling = useRef(false) // Prevent overlapping scroll events
 
   useEffect(() => {
     const handleScroll = (event: WheelEvent) => {
-      if (isScrolling.current) return // Prevent handling scroll if already scrolling
+      if (isScrolling.current) {
+        event.preventDefault()
+        return // Block any new scroll events during animation
+      }
 
       const sections = document.querySelectorAll<HTMLElement>('.section')
       const currentScroll = window.scrollY
       const viewportHeight = window.innerHeight
 
+      // Detect the current section
       const currentSectionIndex = Array.from(sections).findIndex(
         (section) =>
-          section.offsetTop <= currentScroll &&
-          section.offsetTop + section.offsetHeight > currentScroll
+          section.offsetTop - 10 <= currentScroll && // Adjusted threshold
+          section.offsetTop + section.offsetHeight - 10 > currentScroll
       )
 
+      if (currentSectionIndex === -1) return // No valid section found
+
+      // Handle scrolling logic
       if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+        // Scroll down to the next section
         isScrolling.current = true
         sections[currentSectionIndex + 1].scrollIntoView({ behavior: 'smooth' })
       } else if (event.deltaY < 0 && currentSectionIndex > 0) {
+        // Scroll up to the previous section
         isScrolling.current = true
         sections[currentSectionIndex - 1].scrollIntoView({ behavior: 'smooth' })
       }
 
-      // Allow scrolling again after the animation completes
+      // Sync timeout with scroll animation duration
       setTimeout(() => {
-        isScrolling.current = false
-      }, 800) // Adjust duration to match animation time
+        isScrolling.current = false // Allow scrolling again
+      }, 1000) // Match typical smooth scroll duration
 
-      event.preventDefault()
+      event.preventDefault() // Prevent default browser scrolling
     }
 
     window.addEventListener('wheel', handleScroll, { passive: false })
@@ -40,7 +49,7 @@ const ScrollController: React.FC = () => {
     }
   }, [])
 
-  return null // No UI for the controller
+  return null // No visual component
 }
 
 export default ScrollController
