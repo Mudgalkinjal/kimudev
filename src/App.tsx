@@ -12,6 +12,7 @@ import MachineLearning from './pages/MachineLearning'
 import ScrollToTop from './components/ScrollToTop'
 import CustomCursor from './components/CustomCursor'
 import './App.css'
+import ProjectList from './pages/ProjectList'
 const App: React.FC = () => {
   return (
     <Router>
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/machinelearning" element={<MachineLearning />} />
         <Route path="/sentimentpage" element={<SentimentPage />} />
+        <Route path="/projectlist" element={<ProjectList />} />
       </Routes>
     </Router>
   )

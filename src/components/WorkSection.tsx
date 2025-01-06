@@ -1,61 +1,80 @@
-import React from 'react'
 import { motion } from 'framer-motion'
-import MachineLearning from '../pages/MachineLearning'
+import { useEffect, useState } from 'react'
 
-const WorkSection: React.FC = () => {
+export default function WorkSection() {
+  const [startTyping, setStartTyping] = useState(false)
+  const [displayText, setDisplayText] = useState('')
+  const fullText = '    Click here to see my Projects    '
+  const typingSpeed = 100
+
+  useEffect(() => {
+    if (startTyping) {
+      let currentIndex = 0
+
+      const typingInterval = setInterval(() => {
+        const nextChar = fullText[currentIndex]
+        if (nextChar !== undefined) {
+          setDisplayText((prev) => prev + nextChar)
+          currentIndex++
+        } else {
+          clearInterval(typingInterval)
+        }
+      }, typingSpeed)
+
+      return () => clearInterval(typingInterval)
+    }
+  }, [startTyping])
+  function handleProjectPage() {}
+
   return (
-    <section
-      id="work section3"
-      className="section w-full h-screen flex flex-col items-center justify-center bg-gray-700"
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="text-center mb-8"
+    <>
+      <style>
+        {`
+          .blinking-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 20px;
+            background-color: white;
+            margin-left: 2px;
+            animation: blink 1s step-start infinite;
+          }
+
+          @keyframes blink {
+            50% {
+              opacity: 0;
+            }
+          }
+        `}
+      </style>
+      <section
+        id="work-section"
+        className="section w-full h-screen flex flex-col items-center justify-center bg-gray-700"
       >
-        <h2 className="text-3xl font-bold text-white">Personal projects</h2>
-        <p className="text-lg mt-4 max-w-lg text-gray-400">
-          Showcase your projects here.
-        </p>
-      </motion.div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 px-4">
         <motion.div
-          className="bg-gray-600 text-white p-6 rounded-lg shadow-lg flex flex-col items-center"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-8"
+          onViewportEnter={() => setStartTyping(true)}
         >
-          <h3 className="text-2xl font-bold">Frontend</h3>
-          <p className="mt-2 text-gray-300 text-center">
-            Explore user-friendly designs and responsive interfaces.
-          </p>
+          <h2 className="text-3xl font-bold text-white">Personal Projects</h2>
         </motion.div>
-        <motion.div
-          className="bg-gray-600 text-white p-6 rounded-lg shadow-lg flex flex-col items-center"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        >
-          <h3 className="text-2xl font-bold">Backend</h3>
-          <p className="mt-2 text-gray-300 text-center">
-            Dive into robust server-side development and APIs.
-          </p>
-        </motion.div>
-        <motion.div
-          className="bg-gray-600 text-white p-6 rounded-lg shadow-lg flex flex-col items-center"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        >
-          <a href="/machinelearning">
-            <h3 className="text-2xl font-bold">Machine Learning</h3>
-            <p className="mt-2 text-gray-300 text-center">
-              Experiment with AI models and predictive analytics.
-            </p>
-          </a>
-        </motion.div>
-      </div>
-    </section>
+        <div className="flex flex-col items-center" onClick={handleProjectPage}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="bg-black text-white px-8 py-4 rounded-lg shadow-lg text-center cursor-pointer"
+          >
+            <pre className="text-lg font-mono text-gray-300">
+              {displayText}
+              {displayText.length < fullText.length ? (
+                <span className="blinking-cursor"> | </span>
+              ) : null}
+            </pre>
+          </motion.div>
+        </div>
+      </section>
+    </>
   )
 }
-
-export default WorkSection
