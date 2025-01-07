@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function WorkSection() {
+  const navigate = useNavigate()
   const [startTyping, setStartTyping] = useState(false)
   const [displayText, setDisplayText] = useState('')
   const fullText = '    Click here to see my Projects    '
@@ -24,7 +26,9 @@ export default function WorkSection() {
       return () => clearInterval(typingInterval)
     }
   }, [startTyping])
-  function handleProjectPage() {}
+  function handleProjectPage() {
+    navigate('/projectlist')
+  }
 
   return (
     <>
