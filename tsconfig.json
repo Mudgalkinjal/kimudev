@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "types": ["@testing-library/jest-dom"],
+    "types": ["node"],
     "module": "ESNext",
     "moduleResolution": "Node",
     "jsx": "react-jsx", // Required for React 17+ (use "react" for older versions)

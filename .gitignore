@@ -1,6 +1,25 @@
+# Node modules
 node_modules/
-dist/
-.env
-*.log
 
-*storybook.log
+# Environment variables
+.env
+/backend/.env
+
+# Logs
+*.log
+*.log.*
+
+# Storybook logs (if you're using Storybook)
+*.storybook.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build output
+build/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp

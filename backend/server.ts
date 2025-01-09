@@ -1,10 +1,10 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
+import { Request, Response } from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
-
+import authRoutes from './routes/ContactForm'
 dotenv.config()
-
 const app = express()
 
 // Middleware
@@ -23,6 +23,8 @@ mongoose
 app.get('/', (req: Request, res: Response) => {
   res.send('API is running')
 })
+// Mount routes
+app.use('/api/auth', authRoutes)
 
 // Listen on Port
 const PORT = process.env.PORT || 5001
