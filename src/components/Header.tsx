@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        Kinjal Mudgal
+        This That
       </motion.h1>
       <motion.p
         className="text-lg text-gray-400"

@@ -17,9 +17,8 @@ const AboutSection: React.FC = () => {
         <h2 className="text-3xl font-bold text-white text-center">About Me</h2>
         <div className="text-base mt-6 text-gray-400">
           <p className="mb-6">
-            Hello! I’m{' '}
-            <span className="font-bold text-white">Kinjal Mudgal</span>, a
-            passionate{' '}
+            Hello! I’m <span className="font-bold text-white">This That</span>,
+            a passionate{' '}
             <span className="font-bold text-white">Full Stack Developer</span>{' '}
             with over 7 years of experience building robust web applications and
             scalable solutions. My work spans a wide spectrum of modern web
