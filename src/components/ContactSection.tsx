@@ -60,7 +60,7 @@ export default function ContactSection() {
 
   return (
     <section
-      id="contact-me section4"
+      id="contact-me"
       className="section w-full min-h-screen flex flex-col items-center justify-center bg-gray-600 px-6 py-12"
     >
       <motion.div

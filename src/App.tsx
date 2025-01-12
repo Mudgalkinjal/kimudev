@@ -2,7 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Navigation from './components/Navigation'
-import AboutSection from './components/AboutSection'
+import IntroductionSection from './components/IntroductionSection'
+import ExpertiseSection from './components/ExpertiseSection'
 import WorkSection from './components/WorkSection'
 import ContactSection from './components/ContactSection'
 import ProfileSection from './components/ProfileSection'
@@ -11,6 +12,9 @@ import SentimentPage from './pages/SentimentPage' // New page for the model
 import MachineLearning from './pages/MachineLearning'
 import ScrollToTop from './components/ScrollToTop'
 import CustomCursor from './components/CustomCursor'
+import EmploymentOne from './components/Employment_one'
+import EmploymentTwo from './components/Employment_two'
+import EmploymentThree from './components/Employment_three'
 import './App.css'
 import ProjectList from './pages/ProjectList'
 const App: React.FC = () => {
@@ -37,11 +41,20 @@ const MainPage: React.FC = () => {
       <section id="header" className="h-screen">
         <Header />
       </section>
-      <section id="about" className="h-screen">
-        <AboutSection />
+      <section id="intro" className="h-screen">
+        <IntroductionSection />
+      </section>
+      <section id="expert" className="h-screen">
+        <ExpertiseSection />
       </section>
       <section id="profile" className="h-screen">
-        <ProfileSection />
+        <EmploymentOne />
+      </section>
+      <section id="profile" className="h-screen">
+        <EmploymentTwo />
+      </section>
+      <section id="profile" className="h-screen">
+        <EmploymentThree />
       </section>
       <section id="work" className="h-screen">
         <WorkSection />

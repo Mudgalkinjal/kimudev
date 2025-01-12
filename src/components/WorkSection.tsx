@@ -51,7 +51,7 @@ export default function WorkSection() {
         `}
       </style>
       <section
-        id="work-section"
+        id="project-section"
         className="section w-full h-screen flex flex-col items-center justify-center bg-gray-700"
       >
         <motion.div
