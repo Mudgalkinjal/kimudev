@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-import ContactForm from '../models/ContactFormSchema'
+import ContactForm from '../models/ContactFormSchema.js'
 
 const router = express.Router()
 
@@ -11,7 +11,6 @@ interface ContactFormRequest extends Request {
     message: string
   }
 }
-
 router.post('/contact', async (req: ContactFormRequest, res: Response) => {
   console.log('Incoming request:', req.body)
   try {
