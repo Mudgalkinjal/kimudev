@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "homepage": ".",
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
@@ -27,9 +28,11 @@
     "three": "^0.171.0",
     "yup": "^1.6.1"
   },
+  
   "rules": {
    "@typescript-eslint/no-unused-vars": "warn"
   },
+  
 "scripts": {
   "start": "react-scripts start --reset-cache",
   "build": "react-scripts build",
