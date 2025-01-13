@@ -30,7 +30,7 @@
 "scripts": {
   "start": "react-scripts start --reset-cache",
   "build": "react-scripts build",
-  "start:backend": "ts-node --esm api/server.ts",
+  "start:backend": "node dist/api/server.js",
   "build:backend": "tsc -p ./tsconfig.json && node dist/api/server.js",
   "test": "jest",
   "test:watch": "jest --watch",
