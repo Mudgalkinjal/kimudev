@@ -1,8 +1,8 @@
-{
+  {
     "version": 2,
     "builds": [
       {
-        "src": "dist/api/**/*.js",
+        "src": "dist/api/**/*.ts",
         "use": "@vercel/node"
       },
       {
@@ -20,7 +20,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "/build/index.html"
       }
     ]
   }
