@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 
 const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [_trail, setTrail] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -11,19 +10,10 @@ const CustomCursor: React.FC = () => {
       setPosition({ x: clientX, y: clientY })
     }
 
-    const updateTrail = () => {
-      setTrail((prev) => ({
-        x: prev.x + (position.x - prev.x) * 0.05,
-        y: prev.y + (position.y - prev.y) * 0.05,
-      }))
-    }
-
     window.addEventListener('mousemove', handleMouseMove)
-    const trailInterval = setInterval(updateTrail, 20)
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
-      clearInterval(trailInterval)
     }
   }, [position])
 
