@@ -12,7 +12,7 @@ const ScrollController: React.FC = () => {
 
       const sections = document.querySelectorAll<HTMLElement>('.section')
       const currentScroll = window.scrollY
-      const viewportHeight = window.innerHeight
+      const _viewportHeight = window.innerHeight
 
       // Detect the current section
       const currentSectionIndex = Array.from(sections).findIndex(

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [trail, setTrail] = useState({ x: 0, y: 0 })
+  const [_trail, setTrail] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
