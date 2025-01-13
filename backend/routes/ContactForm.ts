@@ -13,17 +13,17 @@ interface ContactFormRequest extends Request {
 }
 
 router.post('/contact', async (req: ContactFormRequest, res: Response) => {
-  console.log('Incoming request:', req.body) // Log the incoming request body
+  console.log('Incoming request:', req.body)
   try {
     const { name, email, subject, message } = req.body
 
     const newContact = new ContactForm({ name, email, subject, message })
     await newContact.save()
 
-    console.log('Contact form saved successfully:', newContact) // Log saved data
+    console.log('Contact form saved successfully:', newContact)
     res.status(201).json({ message: 'Contact form submitted successfully' })
   } catch (error) {
-    console.error('Error saving contact form:', error) // Log the error
+    console.error('Error saving contact form:', error)
     res.status(500).json({ error: 'Failed to submit the contact form' })
   }
 })

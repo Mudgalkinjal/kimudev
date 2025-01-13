@@ -16,16 +16,16 @@ const express_1 = __importDefault(require("express"));
 const ContactFormSchema_1 = __importDefault(require("../models/ContactFormSchema"));
 const router = express_1.default.Router();
 router.post('/contact', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log('Incoming request:', req.body); // Log the incoming request body
+    console.log('Incoming request:', req.body);
     try {
         const { name, email, subject, message } = req.body;
         const newContact = new ContactFormSchema_1.default({ name, email, subject, message });
         yield newContact.save();
-        console.log('Contact form saved successfully:', newContact); // Log saved data
+        console.log('Contact form saved successfully:', newContact);
         res.status(201).json({ message: 'Contact form submitted successfully' });
     }
     catch (error) {
-        console.error('Error saving contact form:', error); // Log the error
+        console.error('Error saving contact form:', error);
         res.status(500).json({ error: 'Failed to submit the contact form' });
     }
 }));

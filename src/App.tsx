@@ -6,7 +6,6 @@ import IntroductionSection from './components/IntroductionSection'
 import ExpertiseSection from './components/ExpertiseSection'
 import WorkSection from './components/WorkSection'
 import ContactSection from './components/ContactSection'
-import ProfileSection from './components/ProfileSection'
 import ScrollController from './components/ScrollController'
 import SentimentPage from './pages/SentimentPage' // New page for the model
 import MachineLearning from './pages/MachineLearning'

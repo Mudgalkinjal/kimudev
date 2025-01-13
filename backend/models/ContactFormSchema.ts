@@ -1,6 +1,5 @@
 import mongoose, { Schema, Document, Model } from 'mongoose'
 
-// Define the interface for TypeScript
 export interface IContactForm extends Document {
   name: string
   email: string
@@ -8,7 +7,6 @@ export interface IContactForm extends Document {
   message: string
 }
 
-// Define the schema
 const ContactFormSchema: Schema = new Schema<IContactForm>(
   {
     name: {
@@ -36,7 +34,6 @@ const ContactFormSchema: Schema = new Schema<IContactForm>(
   }
 )
 
-// Create the model
 const ContactForm: Model<IContactForm> = mongoose.model<IContactForm>(
   'ContactForm',
   ContactFormSchema

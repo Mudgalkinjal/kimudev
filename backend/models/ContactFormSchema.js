@@ -34,7 +34,6 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-// Define the schema
 const ContactFormSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -58,6 +57,5 @@ const ContactFormSchema = new mongoose_1.Schema({
 }, {
     timestamps: true,
 });
-// Create the model
 const ContactForm = mongoose_1.default.model('ContactForm', ContactFormSchema);
 exports.default = ContactForm;
