@@ -1,15 +1,3 @@
-// import express from 'express'
-
-// const router = express.Router()
-
-// // POST /contact route
-// router.post('/contact', (req, res) => {
-//   console.log('Contact form submitted successfully!')
-//   res.status(200).send({ message: 'Contact form submitted successfully!' })
-// })
-
-// export default router
-
 import express, { Request, Response } from 'express'
 import ContactForm from '../models/ContactFormSchema.js'
 

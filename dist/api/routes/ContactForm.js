@@ -1,5 +1,7 @@
-/* eslint-disable import/first */
-// import express from 'express'
+
+import express from 'express';
+import ContactForm from '../models/ContactFormSchema.js';
+
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -9,15 +11,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// const router = express.Router()
-// // POST /contact route
-// router.post('/contact', (req, res) => {
-//   console.log('Contact form submitted successfully!')
-//   res.status(200).send({ message: 'Contact form submitted successfully!' })
-// })
-// export default router
-import express from 'express';
-import ContactForm from '../models/ContactFormSchema.js';
 const router = express.Router();
 router.post('/contact', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     console.log('Incoming request:', req.body);

@@ -1,8 +1,10 @@
-/* eslint-disable import/first */
-// import express from 'express'
-// import cors from 'cors'
-// import dotenv from 'dotenv'
-// import contactRoutes from './routes/ContactForm.js' // Ensure the correct path and .js extension if using ES modules
+
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import authRoutes from './routes/ContactForm.js';
+
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -12,23 +14,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// dotenv.config()
-// const app = express()
-// // Middleware
-// app.use(cors())
-// app.use(express.json())
-// // Mount the routes
-// app.use('/api/auth', contactRoutes)
-// // Start the server locally
-// const PORT = process.env.PORT || 5001
-// app.listen(PORT, () => {
-//   console.log(`Server running on http://localhost:${PORT}`)
-// })
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import authRoutes from './routes/ContactForm.js';
 dotenv.config();
 const app = express();
 // Middleware
