@@ -94,6 +94,8 @@ export default function ProjectList() {
               <p className="text-gray-400 mt-2">{project.description}</p>
               <a
                 href={project.link}
+                rel="noopener noreferrer"
+                target="_blank"
                 className="mt-4 text-blue-400 hover:underline"
               >
                 View Project
