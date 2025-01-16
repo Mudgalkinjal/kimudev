@@ -138,23 +138,23 @@ export default function ContactSection() {
           <p>
             LinkedIn:{' '}
             <a
-              href="https://linkedin.com/in/"
+              href="https://linkedin.com/in/kinjalmudgal/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400"
             >
-              {/* linkedin.com/in/ *}
+              linkedin.com/in/kinjalmudgal
             </a>
           </p>
           <p>
             GitHub:{' '}
             <a
-              href="https://github.com/"
+              href="https://github.com/Mudgalkinjal"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400"
             >
-              {/* github.com/ */}
+              github.com/Mudgalkinjal
             </a>
           </p>
         </div>

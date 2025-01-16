@@ -8,7 +8,7 @@ const Header: React.FC = () => {
       className="section w-full h-screen flex flex-col items-center justify-center"
     >
       <motion.img
-        src="/bp.png"
+        src="/profpic.jpeg"
         alt="Kinjal"
         className="rounded-full w-32 h-32 mb-4"
         initial={{ opacity: 0, scale: 0.8 }}
