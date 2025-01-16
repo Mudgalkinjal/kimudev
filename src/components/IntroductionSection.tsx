@@ -31,7 +31,23 @@ const IntroductionSection: React.FC = () => {
               and scalable solutions. My work spans a wide spectrum of modern
               web development, data analytics, machine learning, and blockchain
               technology, always with a focus on delivering seamless user
-              experiences and high-performance applications.
+              experiences and high-performance applications. <br />
+              <br />
+              Beyond coding, I am deeply passionate about productivity and
+              workflow optimization. <br />
+              On my{' '}
+              <a
+                href="https://www.notion.com/@browniepoints"
+                rel="noreferrer"
+                target="_blank"
+                className="text-blue-500 underline"
+              >
+                Notion creator profile
+              </a>
+              , I design templates and systems that empower individuals to stay
+              organized and achieve their goals. Additionally, I explore my
+              creative side as a food photographer, capturing the art and
+              essence of culinary experiences.
             </p>
           </div>
         </div>

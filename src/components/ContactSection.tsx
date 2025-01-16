@@ -75,9 +75,8 @@ export default function ContactSection() {
         </h2>
 
         <p className="text-lg mt-4 text-center">
-          I’d love to hear from you! Whether you have a question, a
-          collaboration idea, or just want to say hello, feel free to get in
-          touch.
+          I welcome your inquiries, collaboration opportunities, or any other
+          professional outreach. Please feel free to get in touch with me.
         </p>
 
         {/* Error Message */}

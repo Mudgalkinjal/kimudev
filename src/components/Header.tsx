@@ -23,14 +23,17 @@ const Header: React.FC = () => {
       >
         KINJAL
       </motion.h1>
-      <motion.p
-        className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400"
+      <motion.div
+        className="text-center text-gray-400"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        Frontend Visionary | ML Enthusiast | Notion Wizard
-      </motion.p>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
+          Full-Stack Specialist <span className="px-2">|</span> Data Visionary{' '}
+          <span className="px-2">|</span> AI & ML Enthusiast
+        </p>
+      </motion.div>
     </section>
   )
 }
