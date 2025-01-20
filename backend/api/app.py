@@ -2,9 +2,18 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pickle
 
+import os
+
+# Get the absolute path of the directory containing app.py
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Construct absolute paths to the model and vectorizer files
+model_path = os.path.join(BASE_DIR, "model.pkl")
+vectorizer_path = os.path.join(BASE_DIR, "vectorizer.pkl")
+
 # Load the trained model and vectorizer
-model = pickle.load(open("model.pkl", "rb"))
-vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+model = pickle.load(open(model_path, "rb"))
+vectorizer = pickle.load(open(vectorizer_path, "rb"))
 
 # Initialize Flask app
 app = Flask(__name__)
