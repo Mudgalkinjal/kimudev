@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+const apiUrl = process.env.REACT_APP_PY_URL
 const SentimentPage: React.FC = () => {
   const [inputText, setInputText] = useState<string>('')
   const [result, setResult] = useState<string | null>(null)
@@ -10,7 +10,7 @@ const SentimentPage: React.FC = () => {
     setResult(null)
 
     try {
-      const response = await fetch('http://127.0.0.1:5002/predict', {
+      const response = await fetch(`${apiUrl}/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
