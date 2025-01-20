@@ -17,7 +17,9 @@ vectorizer = pickle.load(open(vectorizer_path, "rb"))
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Allow Cross-Origin requests from your React app
+CORS(app, resources={r"/*": {"origins": "https://kimudev.vercel.app"}})
+
+CORS(app)
 
 # Default route
 @app.route("/", methods=["GET"])
