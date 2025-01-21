@@ -7,7 +7,7 @@ import ExpertiseSection from './components/ExpertiseSection'
 import WorkSection from './components/WorkSection'
 import ContactSection from './components/ContactSection'
 import ScrollController from './components/ScrollController'
-import SentimentPage from './pages/SentimentPage' // New page for the model
+import SentimentPage from './pages/SentimentPage'
 import MachineLearning from './pages/MachineLearning'
 import ScrollToTop from './components/ScrollToTop'
 import CustomCursor from './components/CustomCursor'

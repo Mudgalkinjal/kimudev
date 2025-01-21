@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-const apiUrl = process.env.REACT_APP_PY_URL
-console.log('API URL:', apiUrl)
+const apiUrl = process.env.REACT_APP_PY_URL || 'http://127.0.0.1:5002'
+
+console.log('API URL (with fallback):', apiUrl)
 
 const SentimentPage: React.FC = () => {
   const [inputText, setInputText] = useState<string>('')
