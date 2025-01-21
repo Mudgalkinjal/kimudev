@@ -22,34 +22,46 @@ const ExpertiseSection: React.FC = () => {
         className="max-w-4xl bg-gray-700 rounded-lg p-8 shadow-lg z-10 sm:mb-2"
       >
         <div className="text-sm sm:text-lg mt-4 mb-4 ml-4 mr-4 text-gray-400">
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              🌐{' '}
-              <span className="font-bold text-white">
-                Web Development & Full Stack
-              </span>
-              : From intuitive front-end designs to efficient back-end systems,
-              I enjoy bringing ideas to life using tools like React, Node.js,
-              and AWS.
+          <ul className="list-none list-inside space-y-2">
+            <li className="flex items-start">
+              <span className="mr-2">🌐</span>
+              <div>
+                <span className="font-bold text-white">
+                  Web Development & Full Stack
+                </span>
+                : From intuitive front-end designs to efficient back-end
+                systems, I enjoy bringing ideas to life using tools like React,
+                Node.js, and AWS.
+              </div>
             </li>
-            <li>
-              📊 <span className="font-bold text-white">Data Analytics</span>: I
-              love working with data—building ETL pipelines, analyzing trends,
-              and creating insightful dashboards that empower informed
-              decision-making.
+            <li className="flex items-start">
+              <span className="mr-2">📊 </span>
+              <div>
+                <span className="font-bold text-white">Data Analytics</span>: I
+                love working with data—building ETL pipelines, analyzing trends,
+                and creating insightful dashboards that empower informed
+                decision-making.
+              </div>
             </li>
-            <li>
-              🤖 <span className="font-bold text-white">Machine Learning</span>:
-              Exploring data patterns and crafting intelligent solutions with
-              Python and cloud-based tools has been a rewarding part of my
-              journey.
+            <li className="flex items-start">
+              <span className="mr-2">🤖 </span>
+              <div>
+                <span className="font-bold text-white">Machine Learning</span>:
+                Exploring data patterns and crafting intelligent solutions with
+                Python and cloud-based tools has been a rewarding part of my
+                journey.
+              </div>
             </li>
-            <li>
-              🔗{' '}
-              <span className="font-bold text-white">Blockchain Solutions</span>
-              : While not my starting point, I’ve successfully contributed to
-              blockchain-based applications, focusing on transparency, security,
-              and usability.
+            <li className="flex items-start">
+              <span className="mr-2">🔗 </span>
+              <div>
+                <span className="font-bold text-white">
+                  Blockchain Solutions
+                </span>
+                : While not my starting point, I’ve successfully contributed to
+                blockchain-based applications, focusing on transparency,
+                security, and usability.
+              </div>
             </li>
           </ul>
         </div>

@@ -23,7 +23,7 @@ const Employment_two: React.FC = () => {
               Barracuda Networks | March 2016 - January 2021
             </span>
           </p>
-          <ul className="list-disc list-inside mt-2 text-lg space-y-1">
+          <ul className="list-none list-inside mt-2 text-lg space-y-1">
             <li>
               Spearheaded a homepage redesign using React and AWS, resulting in
               an 18% increase in user engagement and conversions.

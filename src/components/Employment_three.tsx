@@ -24,7 +24,7 @@ const Employment_three: React.FC = () => {
               Transworld Technologies | January 2013 - January 2014
             </span>
           </p>
-          <ul className="list-disc list-inside mt-2 text-lg space-y-1">
+          <ul className="list-none list-inside mt-2 text-lg space-y-1">
             <li>
               Built and tested dynamic websites using CMS platforms like Joomla
               and WordPress, ensuring project requirements were met.

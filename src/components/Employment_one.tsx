@@ -35,7 +35,7 @@ const Employment_one: React.FC = () => {
               EY | May 2022 - October 2023
             </span>
           </p>
-          <ul className="list-disc list-inside text-lg space-y-1">
+          <ul className="list-none list-inside text-lg space-y-1">
             <li>
               Led the development of a business management tool, improving
               collaboration and efficiency by streamlining processes with modern
