@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 const apiUrl = process.env.REACT_APP_PY_URL
+console.log('API URL:', apiUrl)
+
 const SentimentPage: React.FC = () => {
   const [inputText, setInputText] = useState<string>('')
   const [result, setResult] = useState<string | null>(null)
