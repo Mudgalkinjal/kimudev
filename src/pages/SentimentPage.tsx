@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 // const apiUrl = process.env.REACT_APP_PY_URL || 'http://127.0.0.1:5002'
 
-const SentimentPage: React.FC = () => {
+export default function ProjectList() {
   const [inputText, setInputText] = useState<string>('')
   // const [result, setResult] = useState<string | null>(null)
   // const [error, setError] = useState<string | null>(null)
@@ -59,7 +59,6 @@ const SentimentPage: React.FC = () => {
     </div>
   )
 }
-export default SentimentPage
 
 // import React, { useState } from 'react'
 // const apiUrl = process.env.REACT_APP_PY_URL || 'http://127.0.0.1:5002'
