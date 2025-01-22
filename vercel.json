@@ -13,17 +13,11 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/dist/api/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/build/index.html"
-    }
-  ],
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/dist/api/index.js"
+    },
     {
       "source": "/(.*)",
       "destination": "/build/index.html"
