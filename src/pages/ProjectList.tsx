@@ -52,24 +52,24 @@ const projects = [
       'Mongoose',
     ],
   },
-  // {
-  //   title: 'Sentiment Analysis',
-  //   description:
-  //     'A web app to analyze the sentiment of user-provided text using an AI model.',
-  //   image: '/sentimentA.png',
-  //   link: '/sentimentpage',
-  //   technologies: [
-  //     'React',
-  //     'TypeScript',
-  //     'Flask',
-  //     'Tailwind CSS',
-  //     'Python',
-  //     'NumPy',
-  //     'Scikit-learn',
-  //     'Jest',
-  //     'Flask-CORS',
-  //   ],
-  // },
+  {
+    title: 'Sentiment Analysis',
+    description:
+      'A web app to analyze the sentiment of user-provided text using an AI model.',
+    image: '/sentimentA.png',
+    link: '/sentimentpage',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Flask',
+      'Tailwind CSS',
+      'Python',
+      'NumPy',
+      'Scikit-learn',
+      'Jest',
+      'Flask-CORS',
+    ],
+  },
 ]
 
 export default function ProjectList() {
