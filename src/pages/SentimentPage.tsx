@@ -28,10 +28,15 @@ export default function SentimentPage() {
   return (
     <div className="bg-gray-900 text-white min-h-screen p-8">
       <h1 className="text-4xl font-bold mb-4">Sentiment Analysis</h1>
-      <p className="mb-4 text-gray-400">
+      {/* <p className="mb-4 text-gray-400">
         Note: This model was trained on gaming-related tweets and may perform
         best on text related to gaming. It might not generalize well to other
         topics.
+      </p> */}
+      {/* NEW NOTE ABOUT TRAINING DATA */}
+      <p className="mb-4 text-yellow-300">
+        Note: This model is still in development and needs additional training
+        data. Results may be less accurate for the time being.
       </p>
       <textarea
         placeholder="Type a tweet or text here..."
