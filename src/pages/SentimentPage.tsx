@@ -34,6 +34,14 @@ export default function SentimentPage() {
         topics.
       </p> */}
       {/* NEW NOTE ABOUT TRAINING DATA */}
+      <p className="mb-4 text-gray-300">
+        This tool uses a machine learning model to gauge the sentiment
+        (positive, negative, or neutral) of a given piece of text. It was
+        initially trained on gaming-related tweets, so it performs best on text
+        related to gaming topics. However, you can still try it on other
+        subjects to see how well it generalizes. Just type or paste your text
+        below and click "Analyze."
+      </p>
       <p className="mb-4 text-yellow-300">
         Note: This model is still in development and needs additional training
         data. Results may be less accurate for the time being.
