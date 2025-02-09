@@ -9,13 +9,10 @@ dotenv.config()
 
 const app = express()
 
-// Middleware
 app.use(cors())
 app.use(express.json())
-console.log('i am here ')
 console.log('MONGO_URI:', process.env.MONGO_URI)
 
-// Database Connection
 let isConnected = false
 const connectDB = async () => {
   if (isConnected) return
@@ -28,15 +25,12 @@ const connectDB = async () => {
   }
 }
 
-// Basic Routes
 app.get('/', (req: Request, res: Response) => {
   res.send('API is running')
 })
 
-// Mount routes
 app.use('/api/auth', authRoutes)
 
-// Export the serverless function (for Vercel)
 const handler = async (req: VercelRequest, res: VercelResponse) => {
   console.log('inside handler')
   await connectDB()
@@ -45,7 +39,6 @@ const handler = async (req: VercelRequest, res: VercelResponse) => {
 
 export default handler
 
-// Start the server locally for development
 if (process.env.NODE_ENV !== 'production') {
   const PORT = process.env.PORT || 5001
   app.listen(PORT, async () => {

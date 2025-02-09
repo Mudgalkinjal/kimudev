@@ -62,7 +62,7 @@ export default function WorkSection() {
           className="text-center mb-8"
           onViewportEnter={() => setStartTyping(true)}
         >
-          <h2 className="text-3xl font-bold text-white">Personal Projects</h2>
+          <h2 className="text-3xl font-bold text-white">Projects</h2>
         </motion.div>
         <div className="flex flex-col items-center" onClick={handleProjectPage}>
           <motion.div

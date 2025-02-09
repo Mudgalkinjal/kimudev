@@ -20,7 +20,7 @@ import './App.css'
 const App: React.FC = () => {
   return (
     <Router>
-      <ScrollToTop /> {/* Now inside the Router */}
+      <ScrollToTop />
       <CustomCursor />
       <ScrollController />
       <Navigation />

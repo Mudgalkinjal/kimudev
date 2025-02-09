@@ -1,7 +1,6 @@
 import React from 'react'
 
 const MachineLearning: React.FC = () => {
-  // Array of projects
   const projects = [
     {
       title: 'Image Classification with CNNs',

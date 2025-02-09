@@ -100,7 +100,6 @@ export default function ProjectList() {
               >
                 View Project
               </a>
-              {/* Technologies Section */}
               <motion.div
                 className="mt-4"
                 initial="hidden"

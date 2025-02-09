@@ -1,4 +1,3 @@
-// Navigation.tsx
 import React from 'react'
 import { Link } from 'react-scroll'
 import {
@@ -12,23 +11,21 @@ import {
 const Navigation: React.FC = () => {
   return (
     <nav className="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-900 p-3 rounded-full flex space-x-4 shadow-lg z-50">
-      {/* Home/Introduction */}
       <Link
-        to="introduction-section" // Updated to match section ID
+        to="introduction-section"
         smooth={true}
         duration={500}
         className="text-gray-400 hover:text-white transition-colors duration-300"
         activeClass="text-white"
         spy={true}
-        offset={-70} // Adjust if you have a fixed header
+        offset={-70}
         aria-label="Home"
       >
         <FaHome size={24} />
       </Link>
 
-      {/* Expertise */}
       <Link
-        to="expertise-section" // Updated to match section ID
+        to="expertise-section"
         smooth={true}
         duration={500}
         className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -37,11 +34,10 @@ const Navigation: React.FC = () => {
         offset={-70}
         aria-label="Expertise"
       >
-        <FaUser size={24} /> {/* Changed icon to FaUser */}
+        <FaUser size={24} />
       </Link>
-      {/* Work Experience */}
       <Link
-        to="work-experience" // Updated to match section ID
+        to="work-experience"
         smooth={true}
         duration={500}
         className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -53,9 +49,8 @@ const Navigation: React.FC = () => {
         <FaProjectDiagram size={24} />
       </Link>
 
-      {/* Projects */}
       <Link
-        to="project-section" // Ensure your Projects section has this ID
+        to="project-section"
         smooth={true}
         duration={500}
         className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -67,7 +62,6 @@ const Navigation: React.FC = () => {
         <FaCode size={24} />
       </Link>
 
-      {/* Contact */}
       <Link
         to="contact-me"
         smooth={true}

@@ -1,6 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 const MachineLearning = () => {
-    // Array of projects
     const projects = [
         {
             title: 'Image Classification with CNNs',

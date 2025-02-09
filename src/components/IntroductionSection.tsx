@@ -1,4 +1,3 @@
-// IntroductionSection.tsx
 import React from 'react'
 import { motion } from 'framer-motion'
 
@@ -8,12 +7,10 @@ const IntroductionSection: React.FC = () => {
       id="introduction-section"
       className="section relative w-full min-h-screen flex items-center justify-center bg-gray-800 px-6 py-15 overflow-hidden"
     >
-      {/* Background Text */}
       <h1 className="absolute top-8 left-8 text-gray-400 text-6xl sm:text-8xl md:text-9xl font-bold opacity-10 z-0">
         About Me
       </h1>
 
-      {/* Animated Content */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
